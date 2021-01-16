@@ -32,13 +32,12 @@ mod game {
 
         #[ink(message, payable)]
         pub fn run_game_test(&mut self, program_id: AccountId) -> Result<bool, Error> {
-            let env = self.env();
             /*ink_env::debug_println(&format!("caller: {:?}", env.caller()));
             ink_env::debug_println(&format!("transferred balance: {:?}", env.transferred_balance()));
             let gas_left = env.gas_left();
             ink_env::debug_println(&format!(*/
-            ink_env::debug_println(&format!("env: {:?}", env));
-            ink_env::debug_println(&format!("weight_to_fee(gas_left): {}", env.weight_to_fee(env.gas_left())));
+            ink_env::debug_println(&format!("env: {:?}", self.env()));
+            ink_env::debug_println(&format!("weight_to_fee(gas_left): {}", self.env().weight_to_fee(self.env().gas_left() as _)));
 
             //ink_env::debug_println(&format!("calling flip on {:?}", program_id));
 /*
