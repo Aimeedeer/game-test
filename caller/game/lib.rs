@@ -45,7 +45,7 @@ mod game {
             //ink_env::debug_println(&format!("weight_to_fee(gas_left): {}", self.env().weight_to_fee(self.env().gas_left() as _)));
         }
 
-        /*#[ink(message, payable)]
+        #[ink(message, payable)]
         pub fn run_game_test(&mut self, program_id: AccountId) {
             /*ink_env::debug_println(&format!("caller: {:?}", env.caller()));
             ink_env::debug_println(&format!("transferred balance: {:?}", env.transferred_balance()));
@@ -54,7 +54,7 @@ mod game {
             /*ink_env::debug_println(&format!("env: {:?}", self.env()));
             ink_env::debug_println(&format!("weight_to_fee(gas_left): {}", self.env().weight_to_fee(self.env().gas_left() as _)));*/
 
-            ink_env::debug_println(&format!("account_id: {:?}", self.env().account_id()));
+            /*ink_env::debug_println(&format!("account_id: {:?}", self.env().account_id()));
             ink_env::debug_println(&format!("balance: {}", self.env().balance()));
             ink_env::debug_println(&format!("caller: {:?}", self.env().caller()));
             ink_env::debug_println(&format!("gas_left: {}", self.env().gas_left()));
@@ -63,7 +63,7 @@ mod game {
             ink_env::debug_println(&format!("block_timestamp: {}", self.env().block_timestamp()));
             ink_env::debug_println(&format!("rent_allowance: {}", self.env().rent_allowance()));
             ink_env::debug_println(&format!("minimum_balance: {}", self.env().minimum_balance()));
-            ink_env::debug_println(&format!("tombstone_deposit: {}", self.env().tombstone_deposit()));
+            ink_env::debug_println(&format!("tombstone_deposit: {}", self.env().tombstone_deposit()));*/
 
             //ink_env::debug_println(&format!("calling flip on {:?}", program_id));
 /*
@@ -94,7 +94,7 @@ mod game {
                 //.unwrap();
             
             ink_env::debug_println(&format!("return value {:?}", return_value));
-        }*/
+        }
     }
 
     #[cfg(test)]
