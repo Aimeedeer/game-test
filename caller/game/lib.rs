@@ -38,6 +38,7 @@ mod game {
             let gas_left = env.gas_left();
             ink_env::debug_println(&format!(*/
             ink_env::debug_println(&format!("env: {:?}", env));
+            ink_env::debug_println(&format!("weight_to_fee(gas_left): {}", env.weight_to_fee(env.gas_left())));
 
             //ink_env::debug_println(&format!("calling flip on {:?}", program_id));
 /*
