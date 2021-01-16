@@ -61,8 +61,8 @@ mod game {
 
             let return_value: bool = build_call::<DefaultEnvironment>()
                 .callee(program_id) 
-                .gas_limit(50)
-                .transferred_value(10)
+                .gas_limit(20035585459) 
+                .transferred_value(0)
                 .exec_input(
                     ExecutionInput::new(Selector::new([0xDE, 0xAD, 0xBE, 0xFF]))
                 )
