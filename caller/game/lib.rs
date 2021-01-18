@@ -30,8 +30,8 @@ mod game {
             ink_env::debug_println(&format!("weight_to_fee(gas_left): {}", self.env().weight_to_fee(self.env().gas_left() as _)));
         }*/
 
-        #[ink(message, payable)]
-        pub fn log_env(&mut self) {
+        //#[ink(message, payable)]
+        //pub fn log_env(&mut self) {
             //ink_env::debug_println(&format!("account_id: {:?}", self.env().account_id()));
             //ink_env::debug_println(&format!("balance: {}", self.env().balance()));
             //ink_env::debug_println(&format!("caller: {:?}", self.env().caller()));
@@ -43,7 +43,7 @@ mod game {
 
             //ink_env::debug_println(&format!("gas_left: {}", self.env().gas_left()));
             //ink_env::debug_println(&format!("weight_to_fee(gas_left): {}", self.env().weight_to_fee(self.env().gas_left() as _)));
-        }
+        //}
 
         #[ink(message, payable)]
         pub fn run_game_test(&mut self, program_id: AccountId) {
@@ -84,14 +84,13 @@ mod game {
 
             let return_value = build_call::<DefaultEnvironment>()
                 .callee(program_id) 
-                .gas_limit(20035585459) 
+                .gas_limit(0)
                 .transferred_value(0)
                 .exec_input(
                     ExecutionInput::new(Selector::new([0xDE, 0xAD, 0xBE, 0xFF]))
                 )
                 .returns::<ReturnType<bool>>()
                 .fire();
-                //.unwrap();
             
             ink_env::debug_println(&format!("return value {:?}", return_value));
         }
